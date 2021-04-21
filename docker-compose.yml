@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    api:
+        build:
+            dockerfile: Dockerfile
+            context: .
+        ports:
+            - 80:80
+        environment:
+            - RATE_LIMIT=1
+            - LOG_4XX_ERRORS=true
